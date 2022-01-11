@@ -1,6 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
 
 
-/* Style landing page */
+
+/* Style background page */
 .l-header{
   min-height: 100vh;
   width: 100%;
@@ -11,7 +17,54 @@
 
 }
 
+/* Style Nav Bar */
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
 
+}
+
+/* Style Group Logo */
+nav img{
+  width: 150px;
+}
+
+/* Style Nav Bar */
+.nav-links{
+  flex: 1;
+  text-align: right; 
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a{
+  color: darkblue;
+  text-decoration: none;
+  font-size: 13px;
+
+}
+
+/* Style Nav Bar Underline */
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: whitesmoke;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+  width: 100%;
+}
 
 
 /* Style all font awesome icons */
