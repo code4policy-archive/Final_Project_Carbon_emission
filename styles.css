@@ -1,3 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Style background page */
+.l-header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),url(images/Landing2.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+
+/* Style Nav Bar */
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* Style Group Logo */
+nav img{
+  width: 150px;
+  background-image: ghostwhite;
+}
+
+/* Style Nav Bar */
+.nav-links{
+  flex: 1;
+  text-align: right; 
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a{
+  color: darkblue;
+  text-decoration: none;
+  font-size: 13px;
+
+}
+
+/* Style Nav Bar Underline */
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: whitesmoke;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+/* Style Text Box */
+.text-box{
+  width: 90%;
+  color: antiquewhite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+}
+
+.text-box h1{
+  font-size: 62px;
+  color: ghostwhite;
+}
+
+.text-box p{
+  font-size: 14px;
+  margin: 10px 0 40px;
+  color: ghostwhite;
+}
+
+/* Style Landing Buttons */
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 20px;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover{
+  border: 1px solid darkred;
+  background: darkred;
+  transition: 1s;
+}
+
 /* Style all font awesome icons */
 .fa {
   padding: 20px;
