@@ -87,6 +87,25 @@ nav img{
   color: whitesmoke;
 }
 
+/* Style Landing Buttons */
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 20px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover{
+  border: 1px solid darkred;
+  background: darkred;
+  transition: 1s;
+}
+
 /* Style all font awesome icons */
 .fa {
   padding: 20px;
