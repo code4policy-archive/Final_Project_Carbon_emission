@@ -66,6 +66,26 @@ nav img{
   width: 100%;
 }
 
+/* Style Text Box */
+.text-box{
+  width: 90%;
+  color: whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.text-box h1{
+  font-size: 62px;
+}
+
+.text-box p{
+  font-size: 14px;
+  margin: 10px 0 40px;
+  color: whitesmoke;
+}
 
 /* Style all font awesome icons */
 .fa {
