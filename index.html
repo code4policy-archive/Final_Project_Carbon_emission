@@ -2,10 +2,8 @@
 <html>
     <head>
         <!--Adding social media icons -->
-        <script src="https://kit.fontawesome.com/4daa34ab62.js" crossorigin="anonymous"></script>
-        <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
-        <!--linking CSS-->
-        <link href="styles.css" rel="stylesheet" type="text/css">
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="le3m28Bd"></script>
  <title>U.S. Carbon Emissions by State</title>
     </head>
     <body>
@@ -31,9 +29,16 @@
                 </embed>
 
             </p>
-
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
+            <!-- Facebook and Twitter shareable links at bottom of page -->
+            <div class="fb-share-button" data-href="https://code4policy.github.io/Final_Project_Carbon_emission/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcode4policy.github.io%2FFinal_Project_Carbon_emission%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet"
+                data-size="large"
+                data-text="https://code4policy.github.io"
+                data-url="https://code4policy.github.io/Final_Project_Carbon_emission">
+                Tweet
+                </a>
+        <!-- Links to our team, climate impacts, and resources pages -->
         <a href='our-team/index.html'>Learn more about our team</a>
         <a href='temperature-change/index.html'>Look at the impact by state!</a>
     </body>
