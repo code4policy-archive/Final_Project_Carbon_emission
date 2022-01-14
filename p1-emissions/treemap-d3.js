@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
-
-<!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
-
 <script>
 
 // set the dimensions and margins of the graph
@@ -15,17 +6,17 @@ var margin = {top: 10, right: 10, bottom: 10, left: 10},
   height = 445 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("#treemap")
+var svg = d3.select("treemap")
 .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
-.append("g")
+  .attr("id", "treemap")
+  .append("g")
   .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
 
 // Read data
 d3.csv('data-sources/emissions-per-capita-2018.csv', function(data) {
-
   // stratify the data: reformatting for d3.js
   var root = d3.stratify()
     .id(function(d) { return d.name; })   // Name of the entity (column name is name in csv)
