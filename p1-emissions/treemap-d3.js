@@ -1,12 +1,10 @@
-<script>
-
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = 445 - margin.left - margin.right,
   height = 445 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("treemap")
+var svg = d3.select("#treemap")
 .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
@@ -16,7 +14,7 @@ var svg = d3.select("treemap")
         "translate(" + margin.left + "," + margin.top + ")");
 
 // Read data
-d3.csv('data-sources/emissions-per-capita-2018.csv', function(data) {
+d3.csv('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_hierarchy_1level.csv', function(data) {
   // stratify the data: reformatting for d3.js
   var root = d3.stratify()
     .id(function(d) { return d.name; })   // Name of the entity (column name is name in csv)
@@ -57,4 +55,3 @@ console.log(root.leaves())
       .attr("font-size", "15px")
       .attr("fill", "white")
 })
-</script>
