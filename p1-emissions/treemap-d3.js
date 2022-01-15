@@ -1,10 +1,11 @@
+function addTreemap(chartID){
 // set the dimensions and margins of the graph
 var margin = {top: 70, right: 10, bottom: 10, left: 10},
   width = 1400 - margin.left - margin.right,
   height = 1000 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("#treemap")
+var svg = d3.select(chartID)
 .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
@@ -13,7 +14,7 @@ var svg = d3.select("#treemap")
         "translate(" + margin.left + "," + margin.top + ")");
 
 // Read data
-d3.csv('data-sources/emissions-per-capita-2018_treemap.csv', function(data) {
+d3.csv('../data-sources/emissions-per-capita-2018_treemap.csv', function(data) {
 
   // stratify the data: reformatting for d3.js
   var root = d3.stratify()
@@ -63,6 +64,7 @@ console.log(root.leaves())
       .text("The states with the highest populations are not its largest emitters by capita")
       .attr("font-size", "40px")
       .attr("fill",  "black" )
+
   // add subtitle
   svg
     .append("text")
@@ -73,3 +75,5 @@ console.log(root.leaves())
       .attr("fill",  "black" )  
 
 })
+}
+addTreemap("#per-capita")
