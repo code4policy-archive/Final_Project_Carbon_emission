@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!--Link to CSS stylesheet -->
 
-		<link rel="stylesheet" type="text/css" href="../p1-emissions/p1-styles.css">
+        <link rel="stylesheet" type="text/css" href="../p1-emissions/p1-styles.css">
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- Load d3.js -->
-        <script src="https://d3js.org/d3.v4.js"></script>
-
-		<title>Climate Enthusiast</title>
-		<link rel="icon" type="image/x-icon" href="../images/Favicon16.ico" >
-	</head>
-	<body>
-		<section class="l-header">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <title>Climate Enthusiast</title>
+        <link rel="icon" type="image/x-icon" href="../images/Favicon16.ico" >
+    </head>
+    <body>
+        <section class="l-header">
             <!--Adding navigation bar-->
             <nav>
                 <a href="../index.html"><img src="../images/Group-logo-t2.png"></a>
@@ -33,13 +30,11 @@
                     </ul>
                 </div>
             </nav>
-        <h2>President Biden has pledged that the United States will reach net-zero emissions by 2050</h2><br>
+            <h2>President Biden has pledged that the United States will reach net-zero emissions by 2050</h2><br>
             <p>But the United States is not a monolith, and its 50 states have different economies, energy mixes, politics, and, as a result, different emissions levels. To ensure that the U.S. achieves its net-zero goals, it is necessary to understand which states are the highest carbon emitters, which are the lowest carbon emitters, and the lessons that can be learned from each.</p>
             <!--Embedding the treemap of carbon emissions per capita -->
-            <div id="treemap"></div>
-            <!-- link javascript -->
+            <div id="per-capita"></div>
 
-            <script src="p1-emissions/treemap-d3.js"></script> 
             <p>Data source: <a href="https://www.eia.gov/environment/emissions/state">U.S. Energy Information Agency</a></p>
             <p>d3.js chart adapted from <a href="https://www.d3-graph-gallery.com/graph/treemap_basic.html">basic treemap</a> by Mike Bostock</p><br>
 
@@ -72,16 +67,10 @@
 
         <h2>There is some good news. The level of coal production in the United States now is lower than it was 30 years ago.</h2>
         <p>The level of coal production in 2020 was around 500 thousand short tons, compared to over 1 million thousand short tons in 1990.</p> 
-
-        <meta charset="utf-8">
-
-        <!-- Load d3.js -->
-        <script src="https://d3js.org/d3.v4.js"></script>
-
+        
         <!-- Create a div where the graph will take place -->
-        <div id="my_dataviz"></div>
+        <div id="coal"></div>
 
-        <script src='main.js'></script>
         <p>Data source: <a href="https://www.eia.gov/environment/emissions/state">U.S. Energy Information Agency</a></p>
         <p>d3.js chart adapted from <a href="https://www.d3-graph-gallery.com/graph/area_basic.html">basic area chart</a> by Mike Bostock</p><br>
 
@@ -95,6 +84,9 @@
         <a class="twitter-share-button"
                 href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Share this to Twitter!</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
-	</body>
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src='main.js'></script>
+        <script src='treemap-d3.js'></script>
+    </body>
 </html>
