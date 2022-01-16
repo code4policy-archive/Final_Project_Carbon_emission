@@ -56,7 +56,28 @@ nav img{
 }
 
 
+/* Style Section Two-Chart */
+.two-charts h1{
+    margin: 0;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 0
+}
 
+.two-charts p{
+    margin: 0;
+    padding-left: 100px;
+    padding-bottom: 10px;
+}
+
+
+/* Style Section Charts */
+.two-charts {
+    margin: 0;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 /*Style for Comparison Charts Vis-Container*/
 select  {
@@ -89,10 +110,52 @@ select  {
     shape-rendering: crispEdges;
     }
 
+/* Style Header */
+.take-action{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url(../images/p6-vote.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Style Text Box Header*/
+.take-action .text-action{
+  width: 90%;
+  color: antiquewhite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: justify;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  transform: translate(-50%,-50%);
+  padding: 20px;
+}
+
+.text-action h1{
+  font-size: 30px;
+  color: ghostwhite;
+}
+
+.text-action h2{
+  font-size: 20px;
+  margin: 10px 0 10px;
+  color: ghostwhite;
+}
+
+.text-action p{
+  font-size: 14px;
+  color: ghostwhite;
+}
+
+/* Style Row and Column for Charts*/
 .row {
-  display: flex;
+    display: flex;
 }
 
 .column {
-  flex: 50%;
+    flex: 50%;
 }
+
+
