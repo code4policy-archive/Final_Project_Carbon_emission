@@ -14,7 +14,7 @@
         <link rel="icon" type="image/x-icon" href="../images/Favicon16.ico" >
     </head>
     <body>
-        <section class="l-header">
+        
             <!--Adding navigation bar-->
             <nav>
                 <a href="../index.html"><img src="../images/Group-logo-t2.png"></a>
@@ -31,6 +31,10 @@
                     </ul>
                 </div>
             </nav>
+            
+            <!-- Content Sections -->
+            <section id="p1-content">
+
             <h2>President Biden has pledged that the United States will reach net-zero emissions by 2050</h2><br>
             <p>But the United States is not a monolith, and its 50 states have different economies, energy mixes, politics, and, as a result, different emissions levels. To ensure that the U.S. achieves its net-zero goals, it is necessary to understand which states are the highest carbon emitters, which are the lowest carbon emitters, and the lessons that can be learned from each.</p><br>
             <!--Embedding the treemap of carbon emissions per capita -->
@@ -67,25 +71,27 @@
 
             </p>
 
-        <h2>There is some good news. The level of coal production in the United States now is lower than it was 30 years ago.</h2>
-        <p>The level of coal production in 2020 was around 500 thousand short tons, compared to over 1 million thousand short tons in 1990.</p> 
-        
-        <!-- Create a div where the graph will take place -->
-        <div id="coal"></div>
+            <h2>There is some good news. The level of coal production in the United States now is lower than it was 30 years ago.</h2>
+            <p>The level of coal production in 2020 was around 500 thousand short tons, compared to over 1 million thousand short tons in 1990.</p> 
+            
+            <!-- Create a div where the graph will take place -->
+            <div id="coal"></div>
 
-        <p>Data source: <a href="https://www.eia.gov/environment/emissions/state">U.S. Energy Information Agency</a></p>
-        <p>d3.js chart adapted from <a href="https://www.d3-graph-gallery.com/graph/area_basic.html">basic area chart</a> by Mike Bostock</p><br>
+            <p>Data source: <a href="https://www.eia.gov/environment/emissions/state">U.S. Energy Information Agency</a></p>
+            <p>d3.js chart adapted from <a href="https://www.d3-graph-gallery.com/graph/area_basic.html">basic area chart</a> by Mike Bostock</p><br>
 
-        <h2>However, there are places in the United States where carbon emissions is still a big issue. Take a peek at what is going on in the 10 states with the highest carbon-dioxide emissions per capita.</h2>
-        
-        <p><b>The conditions in some states are not only a threat to the environment, but also to human health.</b></p>
-        
-        <div class="flourish-embed flourish-cards" data-src="visualisation/8358587"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+            <h2>However, there are places in the United States where carbon emissions is still a big issue. Take a peek at what is going on in the 10 states with the highest carbon-dioxide emissions per capita.</h2>
+            
+            <p><b>The conditions in some states are not only a threat to the environment, but also to human health.</b></p>
+            
+            <div class="flourish-embed flourish-cards" data-src="visualisation/8358587"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-        
-        <a class="twitter-share-button"
-                href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Share this to Twitter!</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            <a class="twitter-share-button"
+                    href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Share this to Twitter!</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+            </section>
+            
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
         <script src='main.js'></script>
