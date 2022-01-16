@@ -56,3 +56,43 @@ nav img{
 }
 
 
+
+
+/*Style for Comparison Charts Vis-Container*/
+select  {
+    display: block;
+    position: static;    
+}
+
+#vis-container {
+    float: right;
+}
+
+#vis-container .bar {
+    fill: rgba(100 , 166, 245 , 0.8);
+    opacity: 0.8;
+    }
+
+#vis-container2 {
+    float: left;
+}
+
+#vis-container2 .bar {
+    fill: rgba(49 , 130, 189 , 0.8);
+    opacity: 0.8;
+    }
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+    }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
