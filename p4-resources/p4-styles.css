@@ -20,7 +20,6 @@ nav{
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
-
 }
 
 /* Style Group Logo */
@@ -64,9 +63,17 @@ nav img{
   width: 100%;
 }
 
+/* Style the section below-navigation-bar (main body) of the document */
+.below-navigation-bar {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
 /* Style Twitter List Feed */
 .twitterborder{
-  margin:auto;
-  width:500px;    
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
 }
 
