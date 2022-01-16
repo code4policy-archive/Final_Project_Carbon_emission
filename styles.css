@@ -161,3 +161,8 @@ nav img{
   bottom: 10px;
 
 }
+
+p {
+  font-size: 10px;
+  line-height: 0.5;
+}
