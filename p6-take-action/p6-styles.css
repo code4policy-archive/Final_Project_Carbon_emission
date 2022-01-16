@@ -90,7 +90,7 @@ select  {
 }
 
 #vis-container .bar {
-    fill: rgba(100 , 166, 245 , 0.8);
+    fill: rgba(100 , 166, 245 , 1);
     opacity: 0.8;
     }
 
@@ -99,7 +99,7 @@ select  {
 }
 
 #vis-container2 .bar {
-    fill: rgba(49 , 130, 189 , 0.8);
+    fill: rgba(0 , 82, 204 , 1);
     opacity: 0.8;
     }
 
@@ -159,3 +159,47 @@ select  {
 }
 
 
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+
+}
+
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+
+}
