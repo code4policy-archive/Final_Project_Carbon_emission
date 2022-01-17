@@ -62,7 +62,7 @@ console.log(root.leaves())
       .attr("x", 0)
       .attr("y", -40)    // -40 to adjust position (higher)
       .text("The states with the highest populations are not its largest emitters by capita")
-      .attr("font-size", "40px")
+      .attr("font-size", "30px")
       .attr("fill",  "black" )
 
   // add subtitle
@@ -71,7 +71,7 @@ console.log(root.leaves())
       .attr("x", 0)
       .attr("y", -10)    // -10 to adjust position (higher)
       .text("State carbon dioxide emissions per capita, 2018 (larger rectangle = higher per capita emissions)")
-      .attr("font-size", "30px")
+      .attr("font-size", "20px")
       .attr("fill",  "black" )  
 
 })
