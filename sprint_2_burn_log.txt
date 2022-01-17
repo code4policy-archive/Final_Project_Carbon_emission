@@ -1,2 +1,5 @@
-Date/time			Type		Points	Remaining	Total
-1/13/2022, 11:15am	Gather.town	202		202			202
+Date/time			Type		Points Completed	Points Remaining	Total
+1/13/2022, 11:15am	Gather.town	0					202					202
+1/14/2022, 3:00pm	Gather.town	16					186					202
+1/15/2022, 5:00pm	Zoom		36					166					202
+1/16/2022, 4:00pm	Zoon		126					36					202

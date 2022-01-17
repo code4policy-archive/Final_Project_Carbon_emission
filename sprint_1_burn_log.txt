@@ -1,5 +1,5 @@
-Date/time			Type		Points	Remaining	Total
-1/8/2022, 5pm		Gather.town	146		146			146
-1/9/2022, 10:30am	Gather.town	146		126			146
-1/10/2022 1:30pm	Gather.town	146		60			146
-1/11/2022, 1:45pm	Gather.town	146		0			146
+Date/time			Type				Points Completed	Points Remaining	Total
+1/8/2022, 5pm		Gather.town	0		0					146					146		
+1/9/2022, 10:30am	Gather.town	20		20					126					146
+1/10/2022 1:30pm	Gather.town	146		86					60					146
+1/11/2022, 1:45pm	Gather.town	146		146					60					146
