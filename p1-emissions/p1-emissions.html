@@ -42,27 +42,22 @@
             <p>Data source: <a href="https://www.eia.gov/environment/emissions/state">U.S. Energy Information Agency</a></p>
             <p>d3.js chart adapted from <a href="https://www.d3-graph-gallery.com/graph/treemap_basic.html">basic treemap</a> by Mike Bostock</p><br>
 
-            <p>The state with the highest carbon emissions per capita in 2018 was Wyoming, with 109.9 metric tons emitted per resident of the state. The states with the lowest emissions, meanwhile, were California and New York, at only 9 metric tons per resident. The median state emitted 16.3 metric tons per capita in 2018.</p><br> 
+            <p>The state with the highest carbon emissions per capita in 2018 was Wyoming, with 109.9 metric tons emitted per state resident. The states with the lowest per capita emissions, meanwhile, were California and New York, at only 9 metric tons per resident. The median state emitted 16.3 metric tons per capita in 2018.</p><br> 
 
             
             <p> However, per capita emissions alone don't tell the whole story. It is, instead, the absolute amount of carbon emitted that will determine whether or not the world is able to stay below its target of a temperature increase of 1.5 degrees Celsius. Here, the story is quite different when we look at absolute carbon emissions by state. Wyoming is below the median in carbon emissions, whereas more populous states like California, Texas and Florida have the highest carbon emissions. </p>
 
             <!--Embedding the carbon emissions by sector maps -->
             <p>
-                <embed> <div class='tableauPlaceholder' id='viz1642349313618' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DPI691_finalproject2&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1642349313618');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-                     </embed>
+                <div class='tableauPlaceholder' id='viz1642441010346' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DPI691_finalproject2&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1642441010346');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>                    </embed>
                
                 <p>Finally, the type of fossil fuel matters a great deal for how much carbon is emitted. In particular, coal emits far more carbon dioxide per unit of energy produced than diesel or natural gas, and a <a href="https://netzeroamerica.princeton.edu/img/Princeton_NZA_Interim_Report_15_Dec_2020_FINAL.pdf">recent study</a> examining the pathways across which the United States could reach its net-zero goals determined that, across all pathways, coal use had to be almost entirely eliminated by 2050.</p>
+
                <!--Embedding searchable table on coal emissions by state -->
                 <div class="flourish-embed flourish-table" data-src="visualisation/8396383"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-                <p>Achieving net-zero emissions by 2050 is possible. However, doing so will take concerted action from within all 50 states.</p> <br>
-
                 </embed>
 
-            </p>
-
-            <h2>There is some good news. The level of coal production in the United States now is lower than it was 30 years ago.</h2>
-            <p>The level of coal production in 2020 was around 500 thousand short tons, compared to over 1 million thousand short tons in 1990.</p> 
+            <h2>There is some good news.</h2><br>
             
             <!-- Create a div where the graph will take place -->
             <div id="coal"></div>
@@ -70,11 +65,13 @@
             <p>Data source: <a href="https://www.eia.gov/environment/emissions/state">U.S. Energy Information Agency</a></p>
             <p>d3.js chart adapted from <a href="https://www.d3-graph-gallery.com/graph/area_basic.html">basic area chart</a> by Mike Bostock</p><br>
 
-            <h2>However, there are places in the United States where carbon emissions is still a big issue. Take a peek at what is going on in the 10 states with the highest carbon-dioxide emissions per capita.</h2>
-            
-            <p><b>The conditions in some states are not only a threat to the environment, but also to human health.</b></p>
-            
-            <div class="flourish-embed flourish-cards" data-src="visualisation/8358587"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+            <p>The level of coal production in 2020 was around 500 thousand short tons, compared to over 1 million thousand short tons in 1990.</p><br>
+
+            <h2>However, there are places in the United States where carbon emissions are a threat not only to the environment, but directly to human health. Here is what is going on in the 10 states with the highest carbon-dioxide emissions per capita.</h2>
+                        
+            <div class="flourish-embed flourish-cards" data-src="visualisation/8358587"><script src="https://public.flourish.studio/resources/embed.js"></script></div><br>
+
+            <p>Achieving net-zero emissions by 2050 is possible. However, doing so will take concerted action from within all 50 states.</p> <br>
 
             
             <a class="twitter-share-button"
