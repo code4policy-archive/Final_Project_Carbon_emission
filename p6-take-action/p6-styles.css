@@ -59,22 +59,22 @@ nav img{
 /* Style Section Two-Chart */
 .two-charts h1{
     margin: 0;
-    padding-left: 100px;
-    padding-top: 20px;
+    padding-left: 0px;
+    padding-top: 0px;
     padding-bottom: 0
 }
 
 .two-charts p{
     margin: 0;
-    padding-left: 100px;
-    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-bottom: 30px;
 }
 
 
 /* Style Section Charts */
 .two-charts {
     margin: 0;
-    padding-left: 100px;
+    padding-left: 0;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -202,4 +202,27 @@ select  {
   position: absolute;
   bottom: 10px;
 
+}
+
+
+body #content {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 20px 0px;
+}
+
+p {
+  color: black;
+  width: 1200px;
+  text-align: :justify;
+}
+
+
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+ul {
+    margin-left:40px;
 }
