@@ -98,3 +98,9 @@ nav img{
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
+
+/*-------formatting the table ------- */
+
+td, th {
+  padding: 1px 4px;
+}
