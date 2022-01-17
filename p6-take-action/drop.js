@@ -1,7 +1,7 @@
 
 function drawbar(cssSelector) {
 
-// Load and munge data, then make the visualization.
+// Load and merge data, then make the visualization.
     var fileName = "../data-sources/state-emissions-byfuel-2018.csv";
     var fuelFields = ["coal", "petroleum", "natural gas"];
 

@@ -26,7 +26,7 @@ window.scrollTo({
   behavior: 'smooth'
 });
 
-/*-------Creating an interctive button that takes a user to the top of page------
+/*-------Creating an interctive button that takes a user to the top of page------*/
 
 #myBtn {
   display: none; /* Hidden by default */
