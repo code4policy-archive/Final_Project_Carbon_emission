@@ -11,3 +11,5 @@ Step 4: I copy pasted the HTML script for the D3 map into Sublime Text. I splite
 Step 5: I edited the JavaScript file to ensure the chart had labels on the x and y axis. I ensured that the date format in the JavaScript worked with the format already used by the chart. 
 
 Step 6: Linked the Javascript file to HTML, making sure that the chart will appear. 
+
+--Alwin Adityo
