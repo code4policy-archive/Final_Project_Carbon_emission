@@ -129,10 +129,12 @@ drawbar("#vis-container");
 
 //Print Chart #2
 drawbar("#vis-container2");
-//--------------------------
+
+
+//-------Creating an interctive button that takes a user to the top of page------
+
 //Get the button:
 mybutton = document.getElementById("myBtn");
-
 
 
 // When the user clicks on the button, scroll to the top of the document
