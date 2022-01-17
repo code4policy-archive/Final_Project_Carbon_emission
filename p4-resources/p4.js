@@ -1,5 +1,6 @@
 
 //-------Creating the table for top 10 emitters------
+function addTreemap(chartID){
 var data = [
   { "Greenhouse rank" : '1', "Parent Coporation/entity" : "Vistra Energy", "Headquarters" : "Irving, TX", "2019 CO2 emissions (metric tons)" : '106,510,086',"Percentage of 2019 CO2 emissions" : '1.6%'},
   { "Greenhouse rank" : '2', "Parent Coporation/entity" : "Duke Energy", "Headquarters" : "Charlotte, NC", "2019 CO2 emissions (metric tons)" : '87,140,105',"Percentage of 2019 CO2 emissions" : '1.3%'},
@@ -46,10 +47,13 @@ function tabulate(data, columns) {
 }
 
 // render the tables
-tabulate(data, ['Greenhouse rank', 'Parent Coporation/entity', 'Headquarters', '2019 CO2 emissions (metric tons)', 'Percentage of 2019 CO2 emissions']); // 4 column table
+tabulate(data, ['Greenhouse rank', 'Parent Coporation/entity', 'Headquarters', '2019 CO2 emissions (metric tons)', 'Percentage of 2019 CO2 emissions']); // 5 column table
 
+} 
+addTreemap("#top-10-actors")
 
 //-------Creating an interctive button that takes a user to the top of page------
+
 
 //Get the button:
 mybutton = document.getElementById("myBtn");
@@ -60,4 +64,5 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
 
