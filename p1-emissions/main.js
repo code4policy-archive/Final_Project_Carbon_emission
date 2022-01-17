@@ -1,8 +1,9 @@
+// coal d3 chart
 function coalChart(chartID){
 // set the dimensions and margins of the graph
 var margin = {top: 30, right: 30, bottom: 50, left: 70},
-    width = 500 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 900 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select(chartID)
@@ -66,6 +67,15 @@ d3.csv("../data-sources/coal-production.csv",
         .y0(y(0))
         .y1(function(d) { return y(d.value) })
         )
+
+  // add subtitle
+  svg
+    .append("text")
+      .attr("x", 0)
+      .attr("y", -10)    // -10 to adjust position (higher)
+      .text("The level of coal production in the United States now is lower than it was 30 years ago")
+      .attr("font-size", "20px")
+      .attr("fill",  "black" )  
 
 })
 }

@@ -42,3 +42,4 @@ with open('state-emissions-byfuel-2018.csv', 'w') as f:
 		writer.writerow([state_name, state_coal , state_petrol, state_ng, state_tot])
 
 
+--Aji Wibowo Suharto

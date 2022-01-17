@@ -1,2 +1,2 @@
 # Final_Project_Carbon_emission
-Final group project for Carbon emission group (Aji, Alwin, Kelsey and Liza)
+Final group project for Programming and Data for Policymakers (DPI 691M) two-week January term class at Harvard Kennedy School. Team members for this project focused on carbon emissions were Alwin Adityo, Kelsey Landau, Liza Maharjan, and Aji Wibowo Suharto.
