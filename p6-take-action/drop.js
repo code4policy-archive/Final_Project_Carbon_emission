@@ -1,7 +1,7 @@
 
 function drawbar(cssSelector) {
 
-// Load and munge data, then make the visualization.
+// Load and merge data, then make the visualization.
     var fileName = "../data-sources/state-emissions-byfuel-2018.csv";
     var fuelFields = ["coal", "petroleum", "natural gas"];
 
@@ -131,5 +131,16 @@ drawbar("#vis-container");
 drawbar("#vis-container2");
 
 
+//-------Creating an interctive button that takes a user to the top of page------
+
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 
