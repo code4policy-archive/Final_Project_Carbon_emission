@@ -1,64 +1,77 @@
+// set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 40, left: 90},
+    width = 500 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
-//-------Creating the table for top 10 emitters------
-var data = [
-  { "Greenhouse rank" : '1', "Parent Coporation/entity" : "Vistra Energy", "Headquarters" : "Irving, TX", "2019 CO2 emissions (metric tons)" : '106,510,086',"Percentage of 2019 CO2 emissions" : '1.6%', "Sector" : "Power Plants"},
-  { "Greenhouse rank" : '2', "Parent Coporation/entity" : "Duke Energy", "Headquarters" : "Charlotte, NC", "2019 CO2 emissions (metric tons)" : '87,140,105',"Percentage of 2019 CO2 emissions" : '1.3%', "Sector" : "Power Plants, Other, Petroleum and Natural Gas Systems, Waste"},
-  { "Greenhouse rank" : '3', "Parent Coporation/entity" : "Southern Company", "Headquarters" : "Atlanta, GA", "2019 CO2 emissions (metric tons)" : '86,244,286',"Percentage of 2019 CO2 emissions" : '1.3%', "Sector" : "Power Plants, Petroleum and Natural Gas Systems, Other"},
-  { "Greenhouse rank" : '4', "Parent Coporation/entity" : "Berkshire Hathaway", "Headquarters" : "Omaha, NE", "2019 CO2 emissions (metric tons)" : '74,960,726' ,"Percentage of 2019 CO2 emissions" : '1.1%', "Sector" : "Power Plants, Petroleum and Natural Gas Systems, Minerals, Metals, Other, Chemicals" },
-  { "Greenhouse rank" : '5', "Parent Coporation/entity" : "American Electric Power", "Headquarters" : "Columbus, OH", "2019 CO2 emissions (metric tons)" : '70,044,545' ,"Percentage of 2019 CO2 emissions" : '1.1%' , "Sector" : "Power Plants, Other"},
-  { "Greenhouse rank" : '6', "Parent Coporation/entity" : "US Government", "Headquarters" : "Washington DC", "2019 CO2 emissions (metric tons)" : '47,504,228' ,"Percentage of 2019 CO2 emissions" : '0.7%', "Sector": "Power Plants, Other, Waste, Petroleum and Natural Gas Systems, Chemicals" },
-  { "Greenhouse rank" : '7', "Parent Coporation/entity" : "Xcel Energy", "Headquarters" : "Minneapolis, MN", "2019 CO2 emissions (metric tons)" : '46,975,696' ,"Percentage of 2019 CO2 emissions" : '0.7%', "Sector" : "Power Plants, Petroleum and Natural Gas Systems, Other" },
-  { "Greenhouse rank" : '8', "Parent Coporation/entity" : "Orion Energy Systems", "Headquarters" : "Manitowoc, WI", "2019 CO2 emissions (metric tons)" : '41,420,489' ,"Percentage of 2019 CO2 emissions" : '0.6%', "Sector" : "Power Plants, Metals" },
-  { "Greenhouse rank" : '9', "Parent Coporation/entity" : "NextEra Energy", "Headquarters" : "Juno Beach, FL", "2019 CO2 emissions (metric tons)" : '40,521,250' ,"Percentage of 2019 CO2 emissions" : '0.6%', "Sector" : "Power Plants, Petroleum and Natural Gas Systems, Other" },
-  { "Greenhouse rank" : '10', "Parent Coporation/entity" : "Exxon Mobil", "Headquarters" : "Irving, TX", "2019 CO2 emissions (metric tons)" : '38,252,969' ,"Percentage of 2019 CO2 emissions" : '0.6%', "Sector": "Refineries, Petroleum and Natural Gas Systems, Power Plants, Chemicals, Other" }
-]
-    
-function tabulate(data, columns) {
-  var table = d3.select('body').append('table')
-  var thead = table.append('thead')
-  var tbody = table.append('tbody');
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
 
-  // append the header row
-  thead.append('tr')
-    .selectAll('th')
-    .data(columns).enter()
-    .append('th')
-      .text(function (column) { return column; });
+// Parse the Data
+d3.csv("../data-sources/actors.csv", function(data) {
 
-  // create a row for each object in the data
-  var rows = tbody.selectAll('tr')
+  // Add X axis
+  var x = d3.scaleLinear()
+    .domain([0, 120])
+    .range([ 0, width]);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+      .attr("transform", "translate(-10,0)rotate(-45)")
+      .style("text-anchor", "end");
+
+  // Y axis
+  var y = d3.scaleBand()
+    .range([ 0, height ])
+    .domain(data.map(function(d) { return d.entity; }))
+    .padding(.1);
+  svg.append("g")
+    .call(d3.axisLeft(y))
+
+  //Bars
+  svg.selectAll("myRect")
     .data(data)
     .enter()
-    .append('tr');
-
-  // create a cell in each row for each column
-  var cells = rows.selectAll('td')
-    .data(function (row) {
-      return columns.map(function (column) {
-        return {column: column, value: row[column]};
-      });
-    })
-    .enter()
-    .append('td')
-      .text(function (d) { return d.value; });
-
-  return table;
-}
-
-// render the tables
-tabulate(data, ['Greenhouse rank', 'Parent Coporation/entity', 'Headquarters', '2019 CO2 emissions (metric tons)', 'Percentage of 2019 CO2 emissions', 'Sector']); // 5 column table
-
-//-------Creating an interctive button that takes a user to the top of page------
+    .append("rect")
+    .attr("x", x(0) )
+    .attr("y", function(d) { return y(d.entity); })
+    .attr("width", function(d) { return x(d.emissions); })
+    .attr("height", y.bandwidth() )
+    .attr("fill", "#53a6c9")
 
 
-//Get the button:
-mybutton = document.getElementById("myBtn");
+    // .attr("x", function(d) { return x(d.Country); })
+    // .attr("y", function(d) { return y(d.Value); })
+    // .attr("width", x.bandwidth())
+    // .attr("height", function(d) { return height - y(d.Value); })
+    // .attr("fill", "#69b3a2")
+
+})
 
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+
+
+
+
+
+
+
+  //Get the button:
+  mybutton = document.getElementById("myBtn");
+
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+
 
 
