@@ -14,7 +14,7 @@ var data = [
 ]
     
 function tabulate(data, columns) {
-  var table = d3.select('body').append('table')
+  var table = d3.select('#top-10-actors').append('table')
   var thead = table.append('thead')
   var tbody = table.append('tbody');
 
